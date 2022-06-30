@@ -11,6 +11,7 @@ jobs:
       - name: Push
         uses: riccardobl/jme-library-action@v0.1
         with:
+          data: "./entry.json"
           userId: ${{ secrets.LIBRARY_USER_ID }}
           authId: ${{ secrets.LIBRARY_KEY_ID }}
           authKey: ${{ secrets.LIBRARY_KEY }}
