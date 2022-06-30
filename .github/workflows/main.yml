@@ -3,8 +3,11 @@ on: [push]
 jobs:
   publish:
     runs-on: ubuntu-latest
-    name: Publish on jme likbrary
+    name: Publish on jme library
     steps:
+      - name: Checkout
+        uses: actions/checkout@v2.4.2
+        
       - name: Push
         uses: riccardobl/jme-library-action@v0.1
         with:
