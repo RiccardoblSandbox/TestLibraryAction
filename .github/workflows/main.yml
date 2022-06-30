@@ -1,0 +1,14 @@
+on: [push]
+
+jobs:
+  publish:
+    runs-on: ubuntu-latest
+    name: Publish on jme likbrary
+    steps:
+    - name: Push
+        uses: riccardobl/jme-library-action
+        with:
+          userId: ${{ secrets.LIBRARY_USER_ID }}
+          authId: ${{ secrets.LIBRARY_KEY_ID }}
+          authKey: ${{ secrets.LIBRARY_KEY }}
+          token: ${{ secrets.GITHUB_TOKEN }}
