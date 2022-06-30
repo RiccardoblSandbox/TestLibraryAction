@@ -5,8 +5,8 @@ jobs:
     runs-on: ubuntu-latest
     name: Publish on jme likbrary
     steps:
-    - name: Push
-        uses: riccardobl/jme-library-action
+      - name: Push
+        uses: riccardobl/jme-library-action@v0.1
         with:
           userId: ${{ secrets.LIBRARY_USER_ID }}
           authId: ${{ secrets.LIBRARY_KEY_ID }}
