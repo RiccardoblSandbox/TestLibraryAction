@@ -9,6 +9,7 @@ jobs:
         uses: actions/checkout@v2.4.2
         
       - name: Push
+        if: github.event_name == 'release'
         uses: riccardobl/jme-library-action@v0.1
         with:
           data: "./entry.json"
